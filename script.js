@@ -1,27 +1,27 @@
-var itemIndex = 1;
-    document.addEventListener("DOMContentLoaded", function(event) {
-        showItem(itemIndex);
-    },false);
+$('body').scrollspy({target: ".navbar", offset: 60});
 
-    // Next/previous controls
-    function plusItem(n) {
-        console.log('plusitem')
-        showItem(itemIndex += n);
-    }
+// Add smooth scrolling on all links inside the navbar
+$(".navbar-header a").on('click', function(event) {
 
-    // Thumbnail image controls
-    function currentItem(n) {
-        showItem(itemIndex = n);
-    }
+ 
+  if (this.hash !== "") {
 
-    function showItem(n) {
+    // Prevent default anchor click behavior
+    event.preventDefault();
 
-        var item = document.getElementsByClassName("carousel-item");
-        if (n > item.length) {itemIndex = 1}
-        if (n < 1) {itemIndex = item.length}
-        for (var i = 0; i < item.length; i++) {
-            item[i].style.display = "none";
-        }
+    // Store hash
+    var hash = this.hash;
 
-        item[itemIndex-1].style.display = "block";
-    }
+    
+    // The  number (800) specifies the number of milliseconds it takes to scroll to the specified area
+    $('html, body').animate({
+      scrollTop: $(hash).offset().top
+    }, 700, function(){
+
+    // Add hash (#) to URL when done scrolling (default click behavior)
+      window.location.hash = hash;
+    });
+
+  } // End if
+
+});

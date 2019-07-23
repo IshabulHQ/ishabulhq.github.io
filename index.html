@@ -1,224 +1,198 @@
-<html>
-    
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
-    
-        <title> Ishabul Haque </title>
-        
-         <link rel="stylesheet" href="particles.css"> 
-        
-        <link rel="stylesheet" href="normalize.css">
-    
-        <link rel="stylesheet" href="style.css">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
 
       
- 
-       
-        
+    <title> Ishabul Haque</title>
 
-    
-        
-    </head>
-    
-    
-    <body>
-        
+    <!-- Bootstrap -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
 
+      
+    <!-- Custom styles for this template -->
+        <link href="myStyle.css" type ="text/css" rel="stylesheet"> 
         
-        
+    <!-- Javascript --> 
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+   
+  </head>
+    
+    
+  <body data-spy="scroll" data-target=".navbar" data-offset="50">
      
+      <!-- Navigation Bar --> 
+      <nav class="navbar fixed-top navbar-expand-lg navbar-inverted"  style ="background-color:white"  id ="mainNav">   
+      <div class="container-fluid">
+      <div class="navbar-header">
         
- <!-- Navbar -->        
-        <div id = "navbar">
-            <div id ="nav--left"> 
-                <button id="nav--brand-button">ISHABUL </button>
-            </div>
-            
-            <div id ="nav--right">
-            <div id = "nav--right-button"> 
-                <button id ="nav--aboutMe-button"
-                        class = "nav--item-button">
-                    About Me 
-                
-                </button>
-            <button id ="nav--education-button"
-                        class = "nav--item-button">
-                    Education
-                
-                </button>
-                <button id ="nav--projects-button"
-                        class = "nav--item-button">
-                    Projects
-                
-                </button>
-                <button id ="nav--connection-button"
-                        class = "nav--item-button">
-                    Connections
-                
-                </button>
-            
-             </div>
-            </div>
-            
- <!-- Cover Page --> 
-            
-        
-        
-        </div>
-        <div id = "particle">    
-            
-            <div id="particles-background" class="vertical-centered-box"></div>
-    <div id="particles-foreground" class="vertical-centered-box"></div>
 
-    <div class="vertical-centered-box">
-      <div class="content">
-        <div class="loader-circle"></div>
-        <div class="loader-line-mask">
-          <div class="loader-line"></div>
+      <ul class="nav navbar-nav mr-auto">
+          <a class="navbar-brand js-scroll-trigger" href="#"> Ishabul Haque </a>     
+          <li class="nav-item"><a class="nav-link js-scroll-trigger"  href="#aboutMe"> About Me </a></li>
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#portfolio"> Resume </a></li>
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#projects"> Projects  </a></li>
+         
+    </ul>
+    </div>
+  </div>
+</nav>
+    <script type ="text/javascript" src="script.js"> </script>
+<!-- End of Navigation Bar --> 
+      
+     <!-- Header  -->  
+     <header class="masterHead">
+      <div class="container">
+        <div class="intro-text">
+          <div class="intro-lead-in"> Ishabul Haque</div>
+          <a href="Resume.pdf" class="download"target ="_blank">Download Resume </a>
+ 
         </div>
-        <svg width="36px" height="24px" viewBox="0 0 36 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-          <path d="M8.98885921,23.8523026 C8.8942483,23.9435442 8.76801031,24 8.62933774,24 L2.03198365,24 C1.73814918,24 1.5,23.7482301 1.5,23.4380086 C1.5,23.2831829 1.55946972,23.1428989 1.65570253,23.0416777 L13.2166154,12.4291351 C13.3325814,12.3262031 13.4061076,12.1719477 13.4061076,11.999444 C13.4061076,11.8363496 13.3401502,11.6897927 13.2352673,11.587431 L1.68841087,0.990000249 C1.57298556,0.88706828 1.5,0.733668282 1.5,0.561734827 C1.5,0.251798399 1.73814918,2.85130108e-05 2.03198365,2.85130108e-05 L8.62933774,2.85130108e-05 C8.76855094,2.85130108e-05 8.89532956,0.0561991444 8.98994048,0.148296169 L21.4358709,11.5757407 C21.548593,11.6783875 21.6196864,11.8297916 21.6196864,11.999444 C21.6196864,12.1693815 21.5483227,12.3219261 21.4350599,12.4251432 L8.98885921,23.8523026 Z M26.5774333,23.8384453 L20.1765996,17.9616286 C20.060093,17.8578413 19.9865669,17.703871 19.9865669,17.5310822 C19.9865669,17.3859509 20.0390083,17.2536506 20.1246988,17.153855 L23.4190508,14.1291948 C23.5163648,14.0165684 23.6569296,13.945571 23.8131728,13.945571 C23.9602252,13.945571 24.0929508,14.0082997 24.1894539,14.1092357 L33.861933,22.9913237 C33.9892522,23.0939706 34.0714286,23.2559245 34.0714286,23.4381226 C34.0714286,23.748059 33.8332794,23.9998289 33.5394449,23.9998289 L26.9504707,23.9998289 C26.8053105,23.9998289 26.6733958,23.9382408 26.5774333,23.8384453 Z M26.5774333,0.161098511 C26.6733958,0.0615881034 26.8053105,0 26.9504707,0 L33.5394449,0 C33.8332794,0 34.0714286,0.251769886 34.0714286,0.561706314 C34.0714286,0.743904453 33.9892522,0.905573224 33.861933,1.00822006 L24.1894539,9.89030807 C24.0929508,9.99152926 23.9602252,10.0542579 23.8131728,10.0542579 C23.6569296,10.0542579 23.5163648,9.98354562 23.4190508,9.87063409 L20.1246988,6.8459739 C20.0390083,6.74617837 19.9865669,6.613878 19.9865669,6.46874677 C19.9865669,6.29624305 20.060093,6.14198767 20.1765996,6.03848544 L26.5774333,0.161098511 Z" fill="#FFFFFF"></path>
-        </svg>
       </div>
-</div>
-   </div>
+    </header>
     
-        <div id = "coverPage" class ="center-div">
-                <p> Ishabul Haque </p>
-            
-            
-            </div>
-            
-        <div id = "links" class = "center-div">
-            <button id = "button--github"
-             class ="button--link"       
-                    > Github </button>
-             <button id = "button--resume" class ="button--link" > Resume </button>
-             <button id = "button--linkedln" class ="button--link" > Linkedln </button>
-         
-            
+<!-- End of Header --> 
+    
+<!-- About Me --> 
+      
+      <section id="aboutMe">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading text-uppercase"> About Me </h2>
+          </div>
         </div>
-    
-        <div id="aboutMe" class ="center-div"> 
+        <div class="row text-center">
+          <div class="col-md-6">
+              
+              <img class ="headshot" src ="download.png" alt ="headshot" height ="450" width ="450"> 
+                   
+          </div>
+          <div class="col-md-6">
             
-            <p> 
+            <p class="text-aboutMe">
                 
-            
+               I am an aspiring engineer with a deep interest in learning more about technology in how it has shaped the world we live in today. My goal is to further expand on my knowledge and experience in the field in hopes of making a difference in society.      
             </p>
-            
-        
-            
-        </div>
-        
-        <div id ="education">
-            
-             <a target="_blank" href="sbuLogo.png"><img class="icon" src="sbuLogo.png"></a>
-            <span style="color:#8c1a11;" class ="left"><b> Stony Brook University </b></span>
-             
-            <span style="color:#8c1a11;"class="right"><i><b> 2017 - 2021 </b> </i></span>
-            <br/>
-            <p></p>
-            <span class ="left"> Computer Engineering </span>
-            <span class="right"><i> New York, NY</i></span><br><br/>
-                    
-                     
-                
+          </div>
          
-            <div id = "classes"> 
-                
-            <ul id ="courseWork" style="list-style:circle;" > 
-                    <p class = "red"> Relevant Coursework </p>
+        </div>
+      </div>
+    </section>
+
+<!-- End of About Me --> 
+      
+<!-- Resume --> 
+      
+      <section id="portfolio">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h3 class="section-heading text-uppercase"> Resume</h3>
+           
+          </div>
+        </div>
+        <div class="row text-center">
+          <div class="col-md-12">
+           
             
-                <li> Computer Techniques for Electronic Design II </li>
-                <li> Electronics Laboratory A </li>
-                <li> Digital Design Using VHDL and PLDs</li>
-                <li> Introduction to Computational and Algorithmic Thinking </li>
-                <li>  Introduction to Object-Oriented Programming </li>
-                <li> Data Structures </li>
-                <li> Introduction to Electrical and Computer Engineering </li>
-                <li> Computer Techniques for Electronic Design I </li>
-                <li> Digital Systems Design </li>
-                <li> Electrical Circuit Analysis I </li>
-                <li> Computer Techniques for Electronic Design II </li>
-                <li> Electronics Laboratory A </li>
-                <li> Digital Design Using VHDL and PLDs </li>
+               
+              <p class="section-tagline" style="text-align:left;">Education</p>
+          
+				<!-- Résumé : Education : SBU -->
+				<p>
+                    <a target="_blank" href="sbuLogo.png"><img style="float: left; margin: 0px 15px 15px 0px;" class="icon" src="sbuLogo.png"></a>
+                    <span style="color:#8c1a11;" class ="left"><b> Stony Brook University </b></span>
+             
+                    <span style="color:#8c1a11;"class="right"><i><b> 2017 - 2021 </b> </i></span>
+                    <br/>
+                   
+                    <span class ="left"> Computer Engineering </span>
+					<span class="right"><i> New York, NY</i></span><br><br/>
+                    
+                     <span style="color:#8c1a11;"class ="left"><b> Relevant Coursework: </b></span> 
+                    <br>
+                <ul id ="courseWork" style="list-style:circle;" > 
+                    <li> Computer Techniques for Electronic Design II </li>
+                    <li> Electronics Laboratory A </li>
+                    <li> Digital Design Using VHDL and PLDs</li>
+                    <li> 	Introduction to Computational and Algorithmic Thinking </li>
+                    <li>  Introduction to Object-Oriented Programming </li>
+                    <li> Data Structures </li>
+                    <li> Introduction to Electrical and Computer Engineering </li>
+                    <li> Computer Techniques for Electronic Design I </li>
+                    <li> Digital Systems Design </li>
+                    <li> Electrical Circuit Analysis I </li>
+                    <li> Computer Techniques for Electronic Design II </li>
+                    <li> Electronics Laboratory A </li>
+                    <li> Digital Design Using VHDL and PLDs </li>
                     
               
                          
               </ul>
-                
-        
-        
-        </div>
+
+            
+            
+          </div>
+        <div class="col-md-12" style ="text-align: center">
+            <span class="skill">C/C++</span>
+            <span class="skill">Java</span>           
+            <span class="skill">Python</span>
+            <span class="skill">Javascript</span>
+            <span class="skill">PHP</span>
+            <span class="skill">Nodejs</span>
+            <span class="skill">JQuery</span>
             </div>
-                <div id="skills" style ="text-align: center">
-                <span class="skill">C/C++</span>
-                <span class="skill">Java</span>           
-                <span class="skill">Python</span>
-                <span class="skill">Javascript</span>
-                <span class="skill">JQuery</span>
-                </div>
-    
-    <div id="projects"> 
-        
-        <h1 class="header"> Projects </h1>
-            <div class="center-div" id="container" style="width: 75rem">
-                <div class = "carousel-item fade"> 
-                    <div class = "carousel-header-text"> 
-                        <p> Hope Somewhere </p>
-                    
-                    </div>
-                    <img class="carousel-image" src = "hackBU.png"> 
-                    <div class = "carousel-text"> 
-                        <p> 
-                            Heat map of the United States that provides a unique perspective on population gender balance. Created during HackBU using the Heatmap API to help provide an external view on finding a significant other based on statistics.
-                        </p>
-                    
-                    </div>
-                
-                </div>
-                <div class = "carousel-item fade"> 
-                   
-                    <div class = "carousel-header-text"> 
-                        <p> Pig Game </p>
-                    
-                    </div>
-                    <img class="carousel-image"  src = "pigGame.png"> 
-                    <div class = "carousel-text"> 
-                        <p> Program to play the Pig dice game. Each turn,a player  rolls a die until either a 1 is rolled or the player decides to "hold": If the player rolls a 1, they score nothing and it becomes the next player's turn. The first player to score 100 or more points wins. </p>
-                    </div>
-                
-                </div>
-                
-                <div class = "carousel-item fade"> 
-                    <div class = "carousel-header-text"> 
-                        <p> Digital Clock</p>
-                    
-                    </div>
-                    <img class="carousel-image"  src = "ese123clock.png"> 
-                    <div class = "carousel-text"> 
-                        <p> Assembled digital clock that displays military time and counts the seconds in binary. A switching regulator was used for USB power and a crowbar circuit was installed for overvoltage protection along with other various components. Upon installation it was programmed in C.
-                             </p>
-                    
-                    </div>
+            
+         
+        </div>
+      </div>
+    </section>
+<!-- End of Portfolio --> 
+      
+<!-- Projects --> 
+      
+    <section id="projects">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h3 class="section-heading text-uppercase"> Projects </h3>
+              <span style="color:#8c1a11"class ="left"><b> Java </b></span> <br> 
               
-                </div>
+             
+                  <li id ="projectList" style="list-style:circle;"> <b> Connect 4 -  </b> A program that stimulates the game of Connect 4  </li>
+             
+            <br><br>
+              <span style="color:#8c1a11"class ="left"><b> JavaScript </b></span> <br> 
                 
-                <!-- Next and previous buttons -->
-                  <a class="prev" onclick="plusItem(-1)">&#10094;</a>
-                  <a class="next" onclick="plusItem(1)">&#10095;</a>
-    
-            </div>
- 
-        
-        
-        
-        
+              <li id ="projectList" style="list-style:circle;"> <b> Hope Somewhere -  </b> Heat map of the United States that provides a unique perspective on population gender balance. Created during HackBU to using the Heatmap API </li>
+                   <li id ="projectList" style="list-style:circle;"> <b> Reaction Tester -  </b> A program to test reaction time upon appearing objects  </li> 
+              <li id ="projectList" style="list-style:circle;"> <b> Pig-Game -  </b> A dice game where each turn, a player repeatedly rolls a die untill either a 1 is rolled or the player decides to "hold" their current score  </li>
+              <li id ="projectList" style="list-style:circle;"> <b> Reaction Tester -  </b> A program to test reaction time upon appearing objects  </li>
+            <br><br>
+               <span style="color:#8c1a11"class ="left"><b> C </b></span> <br> 
+                    <li id ="projectList" style="list-style:circle;"> <b> Digital Clock -  </b> Assembled Digital Clock programmed in C  </li>      
+             
+          </div>
         </div>
-        </div>
-       
-        <div  id ="footer">
+        <div class="row text-center">
+         
+          </div>
+    </section> 
+      
+<!-- End of Projects --> 
+
+      
+<!-- Contact --> 
+    <section id="contact"> 
+        
+        <div  id ="footer"><div class="inner">
 			<span class="left" style ="font-size: 15px; padding-left: 10px"> 	
             © Ishabul Haque
                 </span>
@@ -227,24 +201,10 @@
 					<a target="_blank" href="https://www.linkedin.com/in/ishabul-haque/">LinkedIn</a>&nbsp; //&nbsp;
 					<a target="_blank" href="https://github.com/IshabulHQ">GitHub</a>
 				</span>
-			
-        
-        
-        
-        
-        
-        
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script type="text/javascript" src="script.js"></script>
-        <script src = "particles.js"> </script>
-        
-    </body>
-
-
-
-
-
-
-
-
+			</div></div>
+             
+      
+      </section>
+          
+  </body>
 </html>
