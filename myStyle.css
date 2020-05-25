@@ -161,9 +161,124 @@ li { margin: 10px; }
 	color:black; }
  
  
-#projects {
-	background-color:white;
-	color: black; }
+#projects{
+    width: 1rem;
+    height: 40rem;
+    margin: 4rem;
+    text-align: center;
+    width: 20rem;
+    background-color: transparent;
+  
+}
+.header{
+   
+    color: white;
+    text-align: center;
+    font-family: Helvetica Neue',Helvetica,Arial,sans-serif;
+    
+}
+
+.container{
+		height: 65%;
+		padding-top: 1rem;
+        padding-bottom: 1rem;
+    
+        
+		
+}
+
+.carousel-item{
+    
+    padding-top: 1rem;
+    margin: auto;
+    width: 40rem;
+    border-style: solid;
+    border-width: thick;
+    border-color: white;
+    text-align: center;
+    padding-bottom: 1rem;
+  
+    
+}
+
+.carousel-image{
+    width: 30rem;
+    height: 15rem;
+    border: solid;
+    
+}
+
+.prev,.next{
+  cursor: pointer;
+  position: absolute;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  top: 150rem;
+  
+    
+    
+}
+.prev{
+    left: 25rem;
+}
+
+.next {
+  right: 25rem;
+ 
+}
+
+
+
+.prev:hover, .next:hover {
+  background-color: rgba(100,0,0,0.8);
+}
+
+/* Caption text */
+.carousel-text {
+  color: white;
+  font-size: 1.5rem;
+  bottom: 8px;
+  z-index: .5; 
+  width: auto;
+  text-align: center; 
+  margin-left: 3rem; 
+  margin-right: 3rem;
+}
+.carousel-header-text{
+  color: white;
+  font-size: 3rem;
+  z-index: .5; 
+  width: auto;
+  text-align: center;
+    
+    
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
  
  
 .right { float: right; }
