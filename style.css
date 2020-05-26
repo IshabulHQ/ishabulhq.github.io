@@ -1,21 +1,55 @@
-#navbar{
-    
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: #333;
+  overflow: hidden;
 }
-a { color: inherit; } 
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #8c1a11;
+  color: white;
+}
+
 
 html{
-    background-color: inherit;
-
-
+    background-color: #333333;
 
 }
-body{
-   background-color: inherit;
+#nav{
+  position:fixed;
+  top:0;
+  right:50%;
+  z-index: 9999;
 }
-#particle{
-    width: 100%;
-    height: 100%;
-   
+
+section{
+  min-height: 500px;
+}
+ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+}
+li {
+      text-decoration: none;
+  
 }
 #navbar{
   
@@ -25,7 +59,7 @@ body{
     height: 5rem;
     background-color: white;
     text-decoration: none;
-    overflow: hidden;
+    overflow: auto;
  
    
 }
@@ -40,75 +74,30 @@ body{
 #nav--left{
     
     float:left;
-    width: 55%;
+    width: 50%;
     height: auto;
     border: none;
-    background-color: inherit;
+    margin-right: -4px;
+    background-color: white;
 }
-#nav--brand-button{
-    outline: none;
-    text-align: inherit;
-    line-height: 2.5rem;
-    display: inline-block;
+#nav--right{
+    float: right;
+    width: 50%;
+    height: auto;
     border: none;
-    padding: 1rem 2rem;
-    text-shadow: none;
-    font-size: 200%;
-    font-weight: 500;
-    width: auto; 
-    outline: none;
-    overflow:scroll;
-    
-    
+    margin-right: -4px;
 }
 
+
 .nav--item-button:hover{
-    height: auto;
+    top: auto;
+    height: 5rem;;
     color: white;
     background-color: #333333;
     
 }
 
-#nav--right{
-   
-    
-    border: none;
-    width: 45%;
-    height: auto;
-    float:right;
-    background-color: inherit;
-    
-}
-.nav--item-button{
-    outline: none;
-    line-height: 2.5rem;
-    margin: 0;
-    display: inline-block;
-    border: none;
-    padding: 1rem 2rem;
-    text-shadow: none;
-    font-size: 140%;    
-    font-weight: 500; 
-}
-#nav--aboutMe-button{
-    width: auto;
-    top: auto;
-}
-#nav--education-button{
-    width: auto;
-    top: auto;
-    
-}
-#nav--projects-button{
-    width: auto;
-    top: auto;
-    
-}
-#nav--connection-button{
-    width: auto;
-    top: auto;
-    
-}
+
 
 #coverPage{
     padding: 0;
@@ -118,13 +107,14 @@ body{
     border-style: solid;
     width: 45rem;
     height: 20rem;
+  
     text-align: center;
     vertical-align: middle;
     font-size:5rem;
 	font-weight:700;
 	line-height:150px;
-	margin-top: 2rem;
-	margin-bottom:2rem;
+	margin-top: 7rem;
+	margin-bottom:7rem;
 	font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif;
     
     
@@ -144,7 +134,7 @@ body{
     border-style: solid;
     text-align: center;
   
-    background-color: #1a1a1a;
+    background-color: #8c1a11;
 }
 .button--link:hover{
     background-color: white;
@@ -160,7 +150,7 @@ body{
     padding-left: 2rem;
     padding-right: 2rem;
     border: none;
-    background-color: transparent;
+    background-color: #8c1a11;
     color: white;
     outline: none;
 }
@@ -188,12 +178,13 @@ body{
 
 #aboutMe{
     
-    margin-top: 5rem;
-    margin-bottom: 5rem;
+    margin-top: 7rem;
+	margin-bottom:7rem;
     color: white;
     background-color: transparent;
     width: 40rem;
     border:solid;
+    font-size: 2rem;
     border-color: white;
     padding: 1rem;
     
@@ -202,6 +193,9 @@ p.red{
     color: #8c1a11; 
    
 	
+}
+p.white{
+    color:white;
 }
 #education{
     background-color: transparent;
@@ -315,7 +309,6 @@ li{
 .prev,.next{
   cursor: pointer;
   position: absolute;
-  top: 50%;
   width: auto;
   margin-top: -22px;
   padding: 16px;
@@ -325,7 +318,7 @@ li{
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   user-select: none;
-  top: 120rem;
+  top: 150rem;
   
     
     

@@ -1,27 +1,75 @@
-$('body').scrollspy({target: ".navbar", offset: 60});
+// Jquery 
 
-// Add smooth scrolling on all links inside the navbar
-$(".navbar-header a").on('click', function(event) {
 
- 
-  if (this.hash !== "") {
+var itemIndex = 1;
+    document.addEventListener("DOMContentLoaded", function(event) {
+        showItem(itemIndex);
+    },false);
 
-    // Prevent default anchor click behavior
-    event.preventDefault();
+    // Next/previous controls
+    function plusItem(n) {
+        console.log('plusitem')
+        showItem(itemIndex += n);
+    }
 
-    // Store hash
-    var hash = this.hash;
+    // Thumbnail image controls
+    function currentItem(n) {
+        showItem(itemIndex = n);
+    }
 
-    
-    // The  number (800) specifies the number of milliseconds it takes to scroll to the specified area
-    $('html, body').animate({
-      scrollTop: $(hash).offset().top
-    }, 700, function(){
+    function showItem(n) {
 
-    // Add hash (#) to URL when done scrolling (default click behavior)
-      window.location.hash = hash;
-    });
+        var item = document.getElementsByClassName("carousel-item");
+        if (n > item.length) {itemIndex = 1}
+        if (n < 1) {itemIndex = item.length}
+        for (var i = 0; i < item.length; i++) {
+            item[i].style.display = "none";
+        }
 
-  } // End if
+        item[itemIndex-1].style.display = "block";
+    };
 
+$(function() {
+  $('#navigation').navpoints();
 });
+$('#navigation').navpoints({
+  speed: 1000
+});
+$('#navigation').navpoints({
+  offset: 70
+});
+$('#navigation').navpoints({
+  currentClass: 'active'
+});
+$('#navigation').navpoints({
+  updateHash: true
+});
+
+$('#navigation').navpoints({
+  classToParent: true
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
