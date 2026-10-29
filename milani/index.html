@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MILANI NYC — A Night Belongs to Milani</title>
+<!-- WOW REBUILD 2026-10-29: Apple design standard TABLED. Based on WOW research: full-screen hero photo + oversized type + dark palette + one gold accent + one primary Reserve action + sticky Reserve/Call bar + CSS ticker + tabbed HTML menu. -->
+<!-- MENU QR: replace the example.com link in the QR image URL below with MILANI's live menu URL before final printing. The QR shown is a sample layout, not a live menu link yet. -->
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: Georgia, "Times New Roman", serif; background: #0a0a0a; color: #f5f0e6; line-height: 1.5; -webkit-font-smoothing: antialiased; padding-bottom: 72px; }
+  .demo-banner { background: #e8b84b; color: #111; text-align: center; padding: 10px 16px; font-weight: 700; font-size: 14px; font-family: Arial, sans-serif; }
+  /* HERO: full-screen example lounge photo, dark overlay, giant type, one primary action */
+  .hero { position: relative; min-height: 100svh; display: flex; flex-direction: column; justify-content: flex-end; overflow: hidden; background: #000; }
+  .hero img.bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.65; }
+  .hero .shade { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.45) 55%, rgba(0,0,0,0.35) 100%); }
+  .hero .content { position: relative; padding: 32px 24px 48px; max-width: 1100px; margin: 0 auto; width: 100%; }
+  .hero .eyebrow { font-family: Arial, sans-serif; letter-spacing: 0.28em; font-size: 13px; color: #e8b84b; text-transform: uppercase; margin: 0 0 12px; }
+  .hero h1 { margin: 0; font-size: clamp(72px, 18vw, 190px); line-height: 0.9; letter-spacing: -0.02em; animation: rise 0.9s ease-out both; }
+  .hero .tagline { font-size: clamp(26px, 5vw, 48px); color: #e8b84b; margin: 16px 0 8px; font-style: italic; animation: rise 0.9s ease-out 0.15s both; }
+  .hero p.sub { font-family: Arial, sans-serif; font-size: 18px; color: #e8e0d0; max-width: 620px; animation: rise 0.9s ease-out 0.3s both; }
+  @keyframes rise { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: translateY(0); } }
+  @media (prefers-reduced-motion: reduce) { .hero h1, .hero .tagline, .hero p.sub { animation: none; } }
+  .cta-primary { display: inline-block; background: #e8b84b; color: #111; text-decoration: none; font-weight: 800; font-family: Arial, sans-serif; padding: 16px 32px; border-radius: 999px; font-size: 18px; margin-top: 24px; }
+  .cta-primary:hover { background: #f5c95e; }
+  .hero .photo-note { font-family: Arial, sans-serif; font-size: 13px; color: #c9c2b2; margin-top: 20px; }
+  /* TICKER: pure CSS marquee */
+  .ticker { overflow: hidden; background: #e8b84b; color: #111; font-family: Arial, sans-serif; font-weight: 800; letter-spacing: 0.08em; padding: 12px 0; white-space: nowrap; }
+  .ticker span { display: inline-block; padding-left: 100%; animation: scroll 28s linear infinite; }
+  @keyframes scroll { from { transform: translateX(0); } to { transform: translateX(-100%); } }
+  @media (prefers-reduced-motion: reduce) { .ticker span { animation: none; padding-left: 0; } }
+  /* INFO STRIP */
+  .strip { display: flex; flex-wrap: wrap; gap: 12px 32px; justify-content: center; padding: 24px 20px; background: #111; font-family: Arial, sans-serif; font-size: 15px; border-bottom: 1px solid #2a2a2a; }
+  .strip b { color: #e8b84b; }
+  .badge21 { border: 2px solid #e8b84b; color: #e8b84b; padding: 2px 10px; border-radius: 999px; font-weight: 800; }
+  section { max-width: 1100px; margin: 0 auto; padding: 72px 24px; }
+  h2 { font-size: clamp(36px, 6vw, 64px); line-height: 1.05; margin: 0 0 16px; }
+  p.lead { font-size: 20px; color: #c9c2b2; max-width: 680px; font-family: Arial, sans-serif; }
+  /* TABBED MENU: real HTML text, prices visible, no invented dishes */
+  .tabs { display: flex; gap: 8px; flex-wrap: wrap; margin: 32px 0 0; }
+  .tabs button { background: transparent; color: #f5f0e6; border: 1px solid #444; padding: 12px 20px; border-radius: 999px; font-size: 16px; cursor: pointer; font-family: Arial, sans-serif; font-weight: 700; }
+  .tabs button.active { background: #e8b84b; color: #111; border-color: #e8b84b; }
+  .panel { display: none; margin-top: 24px; border-top: 1px solid #2a2a2a; }
+  .panel.active { display: block; }
+  .panel .row { display: flex; justify-content: space-between; gap: 24px; padding: 18px 0; border-bottom: 1px solid #2a2a2a; font-family: Arial, sans-serif; }
+  .panel .row strong { font-size: 19px; }
+  .panel .row .price { color: #e8b84b; font-weight: 800; white-space: nowrap; }
+  .panel .row small { display: block; color: #a99f8a; }
+  /* PHOTO STRIP: swipeable, example photos labelled */
+  .strip-photos { display: flex; gap: 16px; overflow-x: auto; padding: 8px 0 16px; scroll-snap-type: x mandatory; }
+  .strip-photos figure { flex: 0 0 78%; max-width: 520px; margin: 0; scroll-snap-align: start; }
+  .strip-photos img { width: 100%; height: 320px; object-fit: cover; border-radius: 16px; display: block; }
+  .strip-photos figcaption { font-family: Arial, sans-serif; font-size: 14px; color: #a99f8a; margin-top: 8px; }
+  /* NIGHTS */
+  .nights { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 32px; }
+  .nights div { border: 1px solid #2a2a2a; border-radius: 16px; padding: 24px; font-family: Arial, sans-serif; }
+  .nights strong { display: block; font-size: 22px; color: #e8b84b; margin-bottom: 8px; }
+  .qr-card { display: flex; gap: 32px; align-items: center; flex-wrap: wrap; margin-top: 32px; background: #f5f0e6; color: #111; border-radius: 18px; padding: 32px; font-family: Arial, sans-serif; }
+  .qr-card img { width: 220px; height: 220px; }
+  .qr-card a.button { display: inline-block; background: #111; color: #fff; text-decoration: none; padding: 12px 24px; border-radius: 999px; font-weight: 700; margin-top: 12px; }
+  footer { max-width: 1100px; margin: 0 auto; padding: 32px 24px 24px; font-size: 14px; color: #a99f8a; border-top: 1px solid #2a2a2a; font-family: Arial, sans-serif; }
+  footer a { color: #e8b84b; }
+  /* STICKY BOTTOM BAR: Reserve + Call + Directions, always visible */
+  .sticky-bar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 50; display: flex; background: #111; border-top: 1px solid #2a2a2a; font-family: Arial, sans-serif; }
+  .sticky-bar a { flex: 1; text-align: center; padding: 16px 8px; text-decoration: none; font-weight: 800; font-size: 16px; }
+  .sticky-bar a.reserve { background: #e8b84b; color: #111; }
+  .sticky-bar a.call, .sticky-bar a.dir { color: #f5f0e6; }
+  @media (max-width: 640px) { .nights { grid-template-columns: 1fr; } section { padding: 56px 20px; } .strip-photos img { height: 260px; } }
+</style>
+</head>
+<body>
+<div class="demo-banner">DEMO MOCKUP FOR MILANI NYC ONLY — Preview, not the live site yet</div>
+
+<header class="hero">
+  <img class="bg" src="https://www.stormlimitededition.com/_next/image/?url=%2Fassets%2Fstorm%2Foptimized_artwork_hero%2Flounge_bar_restaurant_hero_1920x1080_q76.webp&w=1920&q=75" alt="Example photo — dark lounge bar, similar vibe to Milani">
+  <div class="shade"></div>
+  <div class="content">
+    <p class="eyebrow">Restaurant &middot; Bar &middot; Lounge &middot; Jamaica, Queens</p>
+    <h1>MILANI</h1>
+    <p class="tagline">A night belongs to Milani.</p>
+    <p class="sub">Cozy, chill, and welcoming — with great music to match the crowd. A spot for date nights and nights out, where you can relax without being rushed.</p>
+    <a class="cta-primary" href="https://www.instagram.com/milani_nyc/">Reserve on Instagram &rarr;</a>
+    <p class="photo-note">Example hero photo — similar lounge vibe, not a Milani photo. Milani's own photos will replace examples for the live site.</p>
+  </div>
+</header>
+
+<div class="ticker" aria-hidden="true"><span>HAPPY HOUR 7&ndash;10 PM &nbsp;&bull;&nbsp; FREE HOOKAH WITH FOOD PURCHASE &nbsp;&bull;&nbsp; 21+ ONLY &nbsp;&bull;&nbsp; BOTTLE SERVICE &nbsp;&bull;&nbsp; DANCEHALL &nbsp;&bull;&nbsp; SOCA &nbsp;&bull;&nbsp; HIPHOP &nbsp;&bull;&nbsp; AFRO &nbsp;&bull;&nbsp; REGGAETON &nbsp;&bull;&nbsp; R&amp;B &nbsp;&bull;&nbsp; FREE ENTRY &nbsp;&bull;&nbsp; KITCHEN OPEN LATE &nbsp;&bull;&nbsp;</span></div>
+
+<div class="strip">
+  <span><b>Open daily</b> 7:00 PM &ndash; 4:00 AM</span>
+  <span><b>Where</b> 131-15 Jamaica Ave, Jamaica, NY 11418</span>
+  <span class="badge21">21+ &middot; Physical ID</span>
+  <span>First come, first served</span>
+</div>
+
+<section>
+  <h2>A night at Milani.</h2>
+  <p class="lead">Strictly 21+. Reservations and birthdays by Instagram DM. No dishes or prices have been invented for this demo — the menu below shows only Milani's own recurring specials from its Instagram.</p>
+  <div class="nights">
+    <div><strong>Happy Hour, every day</strong>7&ndash;10 PM. Free hookah flavours during happy hour with a food purchase. Free entry all night.</div>
+    <div><strong>The music</strong>Dancehall, Soca, HipHop, Afro, Reggaeton, R&amp;B.</div>
+    <div><strong>Late night</strong>Kitchen open late. Open every night until 4 AM.</div>
+  </div>
+</section>
+
+<section id="menu">
+  <h2>The menu.</h2>
+  <p class="lead">Tabbed, in real text — no PDF to pinch-zoom. Milani's full food menu will go here once the restaurant shares it.</p>
+  <div class="tabs" role="tablist">
+    <button class="active" onclick="showTab('happy', this)">Happy Hour</button>
+    <button onclick="showTab('cocktails', this)">Cocktails</button>
+    <button onclick="showTab('bottles', this)">Bottle Service</button>
+    <button onclick="showTab('hookah', this)">Hookah</button>
+  </div>
+  <div class="panel active" id="tab-happy">
+    <div class="row"><div><strong>Happy Hour, daily</strong><small>7&ndash;10 PM, every day</small></div><div class="price">Daily</div></div>
+    <div class="row"><div><strong>Free hookah flavours</strong><small>During happy hour, with a food purchase</small></div><div class="price">Free*</div></div>
+    <div class="row"><div><strong>$8 Cocktails</strong><small>Milani's recurring happy-hour price</small></div><div class="price">$8</div></div>
+    <div class="row"><div><strong>$2 Wings</strong><small>Wednesdays — "Wingsday Wednesday"</small></div><div class="price">$2</div></div>
+  </div>
+  <div class="panel" id="tab-cocktails">
+    <div class="row"><div><strong>Cocktails</strong></div><div class="price">$8</div></div>
+    <div class="row"><div><strong>Fishbowls</strong></div><div class="price">$15</div></div>
+    <div class="row"><div><strong>LIT Buckets</strong></div><div class="price">$25</div></div>
+    <div class="row"><div><strong>Thirst Towers</strong></div><div class="price">$99</div></div>
+  </div>
+  <div class="panel" id="tab-bottles">
+    <div class="row"><div><strong>Bottles</strong></div><div class="price">$130</div></div>
+    <div class="row"><div><strong>Bottle specials</strong><small>On some posts, till midnight</small></div><div class="price">$150</div></div>
+    <div class="row"><div><strong>Thirst Towers</strong></div><div class="price">$99</div></div>
+  </div>
+  <div class="panel" id="tab-hookah">
+    <div class="row"><div><strong>Free hookah flavours</strong><small>During happy hour, with a food purchase</small></div><div class="price">Free*</div></div>
+    <div class="row"><div><strong>Hookah service</strong><small>Flavours and full pricing to be confirmed by Milani — DM @milani_nyc</small></div><div class="price">Ask</div></div>
+  </div>
+  <p style="font-family: Arial, sans-serif; color: #a99f8a; margin-top: 16px;">* Free hookah during happy hour with a food purchase, per Milani's own Instagram. Specials are Milani's recurring prices — check Instagram for tonight's event.</p>
+</section>
+
+<section>
+  <h2>Example photos — similar vibe, not Milani's photos.</h2>
+  <p class="lead">Milani's own Google photos are low quality, so this demo uses higher-quality example photos of similar things to show what the live site could look like. These are examples only and will be replaced with Milani's own photos before launch. Swipe &rarr;</p>
+  <div class="strip-photos">
+    <figure><img src="https://images.squarespace-cdn.com/content/v1/68e44ef6b06c5c5dd23c1892/5bc9131d-ecba-40a9-af59-2b128da18ce1/Updated+Image.png?format=2500w" alt="Example photo — dark lounge interior, similar vibe"><figcaption>Example: lounge interior</figcaption></figure>
+    <figure><img src="https://reeses-luxury-hookah.com/images/hookah-smoke-bg.jpg" alt="Example photo — hookah, similar to Milani's hookah service"><figcaption>Example: hookah</figcaption></figure>
+    <figure><img src="https://cache.marriott.com/is/image/marriotts7prod/ak-lonak-bar-beverage-41767:Classic-Hor?wid=1336&fit=constrain" alt="Example photo — cocktails at a bar, similar vibe"><figcaption>Example: cocktails</figcaption></figure>
+    <figure><img src="https://tastesofhomemade.com/wp-content/uploads/2025/01/Air-Fryer-BBQ-Chicken-Wings-10.jpg" alt="Example photo — chicken wings, similar to Milani's wings nights"><figcaption>Example: wings</figcaption></figure>
+  </div>
+</section>
+
+<section id="visit">
+  <h2>Visit Milani.</h2>
+  <p class="lead">131-15 Jamaica Ave, Jamaica, NY 11418<br>929-398-4364<br>Open 7 days — 7:00 PM to 4:00 AM<br>Instagram: <a href="https://www.instagram.com/milani_nyc/" style="color:#e8b84b;">@milani_nyc</a> — DM for reservations and birthdays.</p>
+  <div class="qr-card">
+    <img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=https%3A%2F%2Fexample.com%2Fmilani-menu" alt="Sample QR code for Milani's menu">
+    <div>
+      <h3 style="margin:0 0 8px; font-size:24px;">For the owner: printable menu QR code.</h3>
+      <p style="margin:0;">Print this and put it on tables or at the door — guests scan it and land straight on the menu.</p>
+      <p style="margin:8px 0 0; color:#555; font-size:15px;">Sample QR shown. Before final printing, this QR will be regenerated with Milani's live menu link — the layout and size stay the same.</p>
+      <a class="button" href="qr-print.html">Open printable QR card</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>MILANI NYC — 131-15 Jamaica Ave, Jamaica, NY 11418 — 929-398-4364</p>
+  <p>Demo mockup made only for MILANI NYC, in the WOW research formula (Apple design standard tabled). Menu and photos to be confirmed by the restaurant. Not sent yet — on hold at the owner's request.</p>
+</footer>
+
+<nav class="sticky-bar" aria-label="Quick actions">
+  <a class="reserve" href="https://www.instagram.com/milani_nyc/">Reserve</a>
+  <a class="call" href="tel:+19293984364">Call</a>
+  <a class="dir" href="https://maps.google.com/?q=131-15+Jamaica+Ave%2C+Jamaica%2C+NY+11418">Directions</a>
+</nav>
+
+<script>
+function showTab(id, btn) {
+  document.querySelectorAll('.panel').forEach(function(p){ p.classList.remove('active'); });
+  document.querySelectorAll('.tabs button').forEach(function(b){ b.classList.remove('active'); });
+  document.getElementById('tab-' + id).classList.add('active');
+  btn.classList.add('active');
+}
+</script>
+</body>
+</html>
