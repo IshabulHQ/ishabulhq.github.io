@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vibe 592 — Bar &amp; Bistro, Richmond Hill</title>
+<!-- DEMO MOCKUP 2026-10-29: verified info only. Hours/address/phone from Places listing (place_id 1320483339902528). Cuisine: Guyanese-style bar & bistro / Caribbean from public listings. No dishes, prices, or specials invented — menu items below are labelled placeholders for Vibe 592 to fill in. Photos are labelled examples, not Vibe 592 photos. -->
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: Georgia, "Times New Roman", serif; background: #140f0a; color: #fdf6e9; line-height: 1.5; -webkit-font-smoothing: antialiased; padding-bottom: 76px; }
+  .demo-banner { background: #f2a541; color: #1a1208; text-align: center; padding: 10px 16px; font-weight: 700; font-size: 14px; font-family: Arial, sans-serif; }
+  .hero { position: relative; min-height: 100svh; display: flex; flex-direction: column; justify-content: flex-end; overflow: hidden; background: #000; }
+  .hero img.bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.62; }
+  .hero .shade { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.45) 55%, rgba(0,0,0,0.35) 100%); }
+  .hero .content { position: relative; padding: 32px 24px 48px; max-width: 1100px; margin: 0 auto; width: 100%; }
+  .hero .eyebrow { font-family: Arial, sans-serif; letter-spacing: 0.28em; font-size: 13px; color: #f2a541; text-transform: uppercase; margin: 0 0 12px; }
+  .hero h1 { margin: 0; font-size: clamp(64px, 16vw, 170px); line-height: 0.9; letter-spacing: -0.02em; }
+  .hero .tagline { font-size: clamp(22px, 4.5vw, 40px); color: #f2a541; margin: 12px 0 8px; }
+  .hero p.sub { font-family: Arial, sans-serif; font-size: 17px; color: #e8ddc8; max-width: 620px; margin: 0 0 24px; }
+  .cta { display: inline-block; background: #f2a541; color: #1a1208; font-family: Arial, sans-serif; font-weight: 700; font-size: 18px; padding: 14px 28px; border-radius: 999px; text-decoration: none; }
+  .cta.secondary { background: transparent; color: #fdf6e9; border: 2px solid #fdf6e9; margin-left: 12px; }
+  .strip { display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: center; background: #241a10; padding: 14px 20px; font-family: Arial, sans-serif; font-size: 15px; }
+  .strip b { color: #f2a541; }
+  section { max-width: 1100px; margin: 0 auto; padding: 48px 24px 8px; }
+  h2 { font-size: clamp(32px, 6vw, 56px); margin: 0 0 8px; }
+  .note { font-family: Arial, sans-serif; color: #cbbfa5; font-size: 15px; }
+  .tabs { display: flex; gap: 8px; flex-wrap: wrap; margin: 20px 0; }
+  .tabs button { font-family: Arial, sans-serif; font-size: 16px; padding: 10px 18px; border-radius: 999px; border: 1px solid #f2a541; background: transparent; color: #fdf6e9; cursor: pointer; }
+  .tabs button.active { background: #f2a541; color: #1a1208; font-weight: 700; }
+  .menu { display: none; }
+  .menu.active { display: block; }
+  .menu ul { list-style: none; padding: 0; margin: 0; }
+  .menu li { display: flex; justify-content: space-between; gap: 16px; padding: 14px 0; border-bottom: 1px solid #3a2c1c; font-size: 18px; }
+  .menu li span.price { color: #f2a541; font-family: Arial, sans-serif; white-space: nowrap; }
+  .photos { display: flex; gap: 12px; overflow-x: auto; padding: 12px 0 24px; }
+  .photos figure { margin: 0; min-width: 260px; }
+  .photos img { width: 260px; height: 180px; object-fit: cover; border-radius: 12px; display: block; }
+  .photos figcaption { font-family: Arial, sans-serif; font-size: 13px; color: #cbbfa5; padding-top: 6px; }
+  .qr { background: #fdf6e9; color: #1a1208; border-radius: 16px; padding: 24px; text-align: center; max-width: 420px; margin: 24px auto; }
+  .qr img { width: 260px; height: 260px; max-width: 80vw; }
+  .qr p { font-family: Arial, sans-serif; margin: 8px 0; }
+  .sticky { position: fixed; left: 0; right: 0; bottom: 0; background: #1a1208; border-top: 1px solid #3a2c1c; display: flex; justify-content: center; gap: 8px; padding: 10px; z-index: 10; }
+  .sticky a { font-family: Arial, sans-serif; font-weight: 700; text-decoration: none; color: #fdf6e9; padding: 10px 16px; border-radius: 999px; border: 1px solid #f2a541; font-size: 15px; }
+  .sticky a.primary { background: #f2a541; color: #1a1208; }
+  footer { text-align: center; font-family: Arial, sans-serif; color: #cbbfa5; font-size: 14px; padding: 32px 20px 16px; }
+  footer a { color: #f2a541; }
+</style>
+</head>
+<body>
+<div class="demo-banner">DEMO MOCKUP — Free preview for Vibe 592. Menu items and photos are placeholders until Vibe 592 supplies their own.</div>
+
+<header class="hero">
+  <img class="bg" src="https://sxmmap.com/wp-content/uploads/caribbean-cuisine-01.jpg" alt="Example Caribbean food spread, similar vibe — not a Vibe 592 photo">
+  <div class="shade"></div>
+  <div class="content">
+    <p class="eyebrow">Richmond Hill, Queens</p>
+    <h1>VIBE 592</h1>
+    <p class="tagline">Entertainment and food &amp; beverage.</p>
+    <p class="sub">A Guyanese-style bar &amp; bistro in South Richmond Hill — open late, every day.</p>
+    <a class="cta" href="tel:+13472381644">Call 347-238-1644</a>
+    <a class="cta secondary" href="https://www.instagram.com/vibe.592/">Instagram @vibe.592</a>
+  </div>
+</header>
+
+<div class="strip">
+  <span><b>Open daily</b> 12:00 PM – 4:00 AM</span>
+  <span><b>Address</b> 124-15 Liberty Ave, Richmond Hill, NY 11419</span>
+  <span><b>Phone</b> 347-238-1644</span>
+</div>
+
+<section>
+  <h2>Menu</h2>
+  <p class="note">Placeholder menu — Vibe 592's real dishes and prices go here once they share them. Nothing below is a real Vibe 592 item or price.</p>
+  <div class="tabs">
+    <button class="active" onclick="showTab('starters', this)">Starters</button>
+    <button onclick="showTab('mains', this)">Mains</button>
+    <button onclick="showTab('drinks', this)">Drinks</button>
+  </div>
+  <div id="starters" class="menu active"><ul>
+    <li><span>Starter — placeholder</span><span class="price">Price to be added</span></li>
+    <li><span>Starter — placeholder</span><span class="price">Price to be added</span></li>
+    <li><span>Starter — placeholder</span><span class="price">Price to be added</span></li>
+  </ul></div>
+  <div id="mains" class="menu"><ul>
+    <li><span>Main — placeholder</span><span class="price">Price to be added</span></li>
+    <li><span>Main — placeholder</span><span class="price">Price to be added</span></li>
+    <li><span>Main — placeholder</span><span class="price">Price to be added</span></li>
+  </ul></div>
+  <div id="drinks" class="menu"><ul>
+    <li><span>Drink — placeholder</span><span class="price">Price to be added</span></li>
+    <li><span>Drink — placeholder</span><span class="price">Price to be added</span></li>
+    <li><span>Drink — placeholder</span><span class="price">Price to be added</span></li>
+  </ul></div>
+</section>
+
+<section>
+  <h2>Photos</h2>
+  <p class="note">Example photos of a similar vibe — not Vibe 592 photos. To be replaced with Vibe 592's own photos before launch.</p>
+  <div class="photos">
+    <figure><img src="https://sxmmap.com/wp-content/uploads/caribbean-cuisine-01.jpg" alt="Example Caribbean food"><figcaption>Example — similar vibe, not a Vibe 592 photo</figcaption></figure>
+    <figure><img src="https://www.storwell.com/wp-content/uploads/2023/04/Various-dishes-from-the-Islands-Caribbean-Cookshop-1000x563.jpg" alt="Example Caribbean dishes"><figcaption>Example — similar vibe, not a Vibe 592 photo</figcaption></figure>
+  </div>
+</section>
+
+<section>
+  <h2>Visit</h2>
+  <p>124-15 Liberty Ave, Richmond Hill, NY 11419<br>Open daily 12:00 PM – 4:00 AM<br>Phone: <a href="tel:+13472381644" style="color:#f2a541">347-238-1644</a><br>Instagram: <a href="https://www.instagram.com/vibe.592/" style="color:#f2a541">@vibe.592</a></p>
+  <div class="qr">
+    <img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=https%3A%2F%2Fexample.com%2Fvibe592-menu" alt="Sample QR code">
+    <p><b>Scan for Menu</b></p>
+    <p>Vibe 592 • 124-15 Liberty Ave, Richmond Hill, NY 11419<br>Open daily 12 PM – 4 AM</p>
+    <p style="font-size:13px;color:#6e6e73">Sample QR only — regenerate with Vibe 592's live menu link before final printing.</p>
+  </div>
+  <p><a href="vibe592_qr_print.html" style="color:#f2a541;font-family:Arial,sans-serif">Printable menu QR card →</a></p>
+</section>
+
+<footer>
+  <p>Demo mockup for Vibe 592 • 124-15 Liberty Ave, Richmond Hill, NY 11419 • 347-238-1644</p>
+</footer>
+
+<nav class="sticky">
+  <a class="primary" href="tel:+13472381644">Call</a>
+  <a href="https://www.google.com/maps/search/?api=1&query=124-15+Liberty+Ave+Richmond+Hill+NY+11419">Directions</a>
+  <a href="https://www.instagram.com/vibe.592/">Instagram</a>
+</nav>
+
+<script>
+function showTab(id, btn) {
+  document.querySelectorAll('.menu').forEach(function(m){ m.classList.remove('active'); });
+  document.getElementById(id).classList.add('active');
+  document.querySelectorAll('.tabs button').forEach(function(b){ b.classList.remove('active'); });
+  btn.classList.add('active');
+}
+</script>
+</body>
+</html>
