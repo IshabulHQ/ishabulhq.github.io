@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vibe 592 — Scan for Menu (Printable)</title>
+<style>
+  body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", Arial, sans-serif; text-align: center; color: #1d1d1f; padding: 48px 20px; }
+  h1 { font-size: 56px; letter-spacing: -0.02em; margin: 0; }
+  p.tagline { font-size: 21px; color: #6e6e73; margin: 8px 0 32px; }
+  img.qr { width: 360px; height: 360px; max-width: 80vw; }
+  p.scan { font-size: 28px; font-weight: 700; margin: 24px 0 8px; }
+  p.details { font-size: 17px; color: #6e6e73; margin: 0; }
+  button { margin-top: 32px; background: #1d1d1f; color: #fff; border: 0; padding: 12px 24px; border-radius: 999px; font-size: 17px; cursor: pointer; }
+  p.note { font-size: 14px; color: #999; margin-top: 24px; }
+  @media print { button, p.note { display: none; } body { padding: 24px; } }
+</style>
+</head>
+<body>
+<h1>VIBE 592</h1>
+<p class="tagline">Entertainment and food &amp; beverage.</p>
+<img class="qr" src="https://api.qrserver.com/v1/create-qr-code/?size=400x400&data=https%3A%2F%2Fexample.com%2Fvibe592-menu" alt="Sample QR code for Vibe 592's menu">
+<p class="scan">Scan for Menu</p>
+<p class="details">124-15 Liberty Ave, Richmond Hill, NY 11419 &nbsp;•&nbsp; 347-238-1644<br>Open daily 12 PM – 4 AM</p>
+<button onclick="window.print()">Print this card</button>
+<p class="note">Sample QR — before final printing, regenerate this QR with Vibe 592's live menu link. Layout and size stay the same.</p>
+</body>
+</html>
